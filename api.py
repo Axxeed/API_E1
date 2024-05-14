@@ -8,7 +8,7 @@ app = FastAPI()
 
 model = joblib.load("xgb.pkl")
 
-@app.post("/predict")
+@app.get("/predict")
 def predict(
     Code_postal_x: float,
     Surface_Carrez_du_1er_lot: float,
